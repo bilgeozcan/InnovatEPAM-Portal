@@ -1,0 +1,8 @@
+node_modules/
+.codex/
+.env
+.DS_Store
+coverage/
+.nyc_output/
+runtime_logs/
+*.log

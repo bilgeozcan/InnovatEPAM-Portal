@@ -1,0 +1,19 @@
+{
+  "name": "innovatepam-portal",
+  "version": "1.0.0",
+  "description": "InnovatEPAM Portal MVP for the A201 Beyond Vibe Coding project sprint.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "smoke:edge": "node scripts/edge-smoke.mjs",
+    "test": "node --test --experimental-test-coverage tests/portal-core.test.mjs",
+    "check": "npm test"
+  },
+  "keywords": [
+    "innovation",
+    "portal",
+    "mvp",
+    "bootcamp"
+  ],
+  "license": "MIT"
+}
