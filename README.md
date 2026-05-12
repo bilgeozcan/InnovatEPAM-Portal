@@ -5,10 +5,10 @@ Employee innovation intake and evaluation MVP for the A201 Beyond Vibe Coding ca
 ## What Is Included
 
 - Register, login, and logout flows.
-- Role distinction between submitters and admins.
+- Role distinction between submitters and Evaluator Admin (admin role).
 - Idea submission with title, description, category, and one file attachment.
 - Idea list, detail cards, status history, and downloadable attachments.
-- Admin review workflow with status changes and evaluator comments.
+- Evaluator Admin review workflow with status changes and evaluator comments.
 - Route-aware navigation with protected redirects for login, dashboard, submit, and guide views.
 - Built-in user guide for the demo flow.
 - Footer attribution to the project creator.
@@ -29,7 +29,7 @@ Open `http://localhost:4173`.
 
 | Role | Email | Password |
 | --- | --- | --- |
-| Admin | `admin@innovatepam.local` | `Admin123!` |
+| Evaluator Admin | `admin@innovatepam.local` | `Admin123!` |
 | Submitter | `aylin@epam.local` | `Submit123!` |
 
 The browser app stores demo data in `localStorage`. Use the reset button in the app header to reload the seeded demo state.

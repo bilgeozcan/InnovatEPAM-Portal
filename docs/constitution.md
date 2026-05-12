@@ -24,10 +24,10 @@ The suite covers:
 - Password hash redaction from public user objects.
 - Idea creation with a single attachment.
 - Submitter-scoped idea visibility.
-- Admin-only review status updates.
+- Evaluator Admin (admin role)-only review status updates.
 - Required comments for accepted or rejected decisions.
 - Role-aware portal metrics.
-- Microsoft Edge runtime flow from submitter submission through admin acceptance.
+- Microsoft Edge runtime flow from submitter submission through Evaluator Admin acceptance.
 
 ## Manual Demo Gate
 
@@ -35,6 +35,6 @@ Before showcase:
 
 1. Start the app with `rtk npm start`.
 2. Login as submitter demo and submit one idea with a file.
-3. Logout and login as admin demo.
+3. Logout and login as Evaluator Admin demo.
 4. Move the idea to accepted or rejected with a comment.
 5. Confirm the status history shows the evaluator comment.

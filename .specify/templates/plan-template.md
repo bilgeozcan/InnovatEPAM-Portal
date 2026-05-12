@@ -31,7 +31,11 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- [ ] Local-first constraint satisfied (no external service dependency for core MVP flow)
+- [ ] Dependency-free stack preserved (HTML/CSS/JS ES modules + Node static server)
+- [ ] Scope constrained to Phase 1 MVP requirements only
+- [ ] Optional items explicitly marked out of MVP commitment
+- [ ] Quality gates identified: `npm test` and `npm run smoke:edge`
 
 ## Project Structure
 

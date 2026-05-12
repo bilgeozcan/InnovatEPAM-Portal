@@ -2,7 +2,7 @@
 
 ## Overview
 
-InnovatEPAM Portal is a local-first employee innovation management MVP. It supports authenticated idea submission, one-file attachments, role-aware idea boards, and evaluator admin decisions with status history.
+InnovatEPAM Portal is a local-first employee innovation management MVP. It supports authenticated idea submission, one-file attachments, role-aware idea boards, and Evaluator Admin (admin role) decisions with status history.
 
 ## Features Completed
 
@@ -12,7 +12,7 @@ InnovatEPAM Portal is a local-first employee innovation management MVP. It suppo
 - [x] Idea Submission - Title, description, category, validation, and owner tracking.
 - [x] File Attachment - Single file input with metadata and browser download link.
 - [x] Idea Listing - Role-aware board with search, status filters, metadata, and history.
-- [x] Evaluation Workflow - Admin-only status updates with required comments for accept/reject.
+- [x] Evaluation Workflow - Evaluator Admin-only status updates with required comments for accept/reject.
 - [x] Guided UI - Data-dense dashboard layout, route-aware navigation, protected redirects, user guide, and creator footer.
 
 ### Phases 2-7 Features

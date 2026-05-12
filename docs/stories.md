@@ -56,7 +56,7 @@ As a user, I want to see ideas relevant to my role so that I can track progress.
 Acceptance criteria:
 
 - Submitters see only their own ideas.
-- Evaluator admins see all ideas.
+- Evaluator Admin (admin role) users see all ideas.
 - Ideas display status, owner, category, update time, attachment, and description.
 - Search and status filtering update the board.
 
@@ -64,11 +64,11 @@ Acceptance criteria:
 
 ### Story 4.1 - Review Idea
 
-As an evaluator admin, I want to update an idea status with comments so that submitters understand the decision.
+As an Evaluator Admin, I want to update an idea status with comments so that submitters understand the decision.
 
 Acceptance criteria:
 
-- Only evaluator admins can change review status.
+- Only Evaluator Admin users can change review status.
 - Valid review statuses are under review, accepted, and rejected.
 - Accepted and rejected changes require comments.
 - Every status update appends a status history entry.

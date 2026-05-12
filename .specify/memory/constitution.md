@@ -1,50 +1,88 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report
+- Version change: N/A -> 1.0.0
+- Modified principles: template placeholders -> five concrete project principles
+- Added sections: Technical Boundaries and Scope, Delivery Workflow and Quality Gates
+- Removed sections: none
+- Templates requiring updates:
+	- ✅ updated: .specify/templates/plan-template.md
+	- ✅ updated: .specify/templates/spec-template.md
+	- ✅ updated: .specify/templates/tasks-template.md
+	- ⚠ pending review: .specify/templates/commands/*.md (directory not present)
+- Follow-up TODOs: none
+-->
+
+# InnovatEPAM Portal Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Local-First by Default
+The project MUST run fully on a local machine without external services, cloud
+dependencies, or network-backed data stores for core behavior. Primary state
+MUST persist in browser localStorage, and the demo MUST remain functional when
+offline after initial load. Rationale: Friday demo reliability requires zero
+infrastructure risk.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Dependency-Free MVP Stack
+Implementation MUST use plain HTML, CSS, and JavaScript ES modules on the
+frontend and a Node static server on the backend utility layer. New runtime
+frameworks or third-party UI/state libraries MUST NOT be introduced unless a
+documented ADR approves an exception. Rationale: minimize moving parts and
+maximize maintainability in a short MVP window.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Phase 1 MVP Scope is Non-Negotiable
+Mandatory in-scope capabilities are: authentication, submitter/admin roles,
+idea submission, one attachment, idea board, status tracking, admin
+accept/reject with comments, and status history. Smart Submission Form and all
+later phases are OPTIONAL and MUST be treated as out of scope for Phase 1
+delivery commitments. Rationale: protect delivery focus and avoid scope creep.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Role-Safe Workflow Integrity
+Submitter and admin actions MUST enforce role boundaries and preserve an
+auditable decision trail. Status transitions MUST be explicit and comments MUST
+be captured for accept/reject decisions. Rationale: the core value of the
+portal is transparent, accountable idea lifecycle management.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Test Gates Before Demo-Ready
+Changes affecting behavior MUST pass both `npm test` and `npm run smoke:edge`
+before being considered demo-ready. Any failing gate blocks release or demo
+sign-off until resolved. Rationale: automated confidence checks are the minimum
+bar for stable local-first delivery.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Technical Boundaries and Scope
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+- Architecture MUST remain local-first and storage-backed by localStorage.
+- Runtime stack MUST remain dependency-free for MVP implementation.
+- Server responsibilities MUST remain static hosting and local demo support.
+- Feature proposals outside Phase 1 MVP MUST be tagged as optional and planned
+	for later phases rather than merged into MVP acceptance criteria.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## Delivery Workflow and Quality Gates
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+1. Specifications MUST declare in-scope MVP requirements and out-of-scope
+	 optional items explicitly.
+2. Implementation plans MUST include a Constitution Check confirming local-first
+	 architecture, dependency-free stack, and Phase 1 scope compliance.
+3. Task plans MUST include verification steps for both required test commands.
+4. Demo readiness MUST be declared only after both test gates pass.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes conflicting process notes for Phase 1 MVP work.
+Amendments require: (1) a written rationale, (2) explicit impact on current
+scope and templates, and (3) an updated Sync Impact Report at the top of this
+file.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+Versioning policy MUST follow semantic versioning for governance text:
+
+- MAJOR: backward-incompatible principle removals or redefinitions.
+- MINOR: new principle/section or materially expanded obligations.
+- PATCH: clarifications, wording refinements, typo fixes.
+
+Compliance review expectations:
+
+- Every plan, spec, and tasks artifact MUST pass a constitution alignment check.
+- Reviewers MUST block approval when mandatory principles or test gates are not
+	satisfied.
+
+**Version**: 1.0.0 | **Ratified**: 2026-05-12 | **Last Amended**: 2026-05-12

@@ -126,3 +126,10 @@
 - [Assumption about scope boundaries, e.g., "Mobile support is out of scope for v1"]
 - [Assumption about data/environment, e.g., "Existing authentication system will be reused"]
 - [Dependency on existing system/service, e.g., "Requires access to the existing user profile API"]
+
+## Constitution Alignment *(mandatory)*
+
+- **Local-First Check**: [Confirm feature runs locally without external service requirements]
+- **Stack Check**: [Confirm dependency-free HTML/CSS/JS ES module + Node static server approach]
+- **MVP Scope Check**: [List mandatory Phase 1 requirements covered by this spec]
+- **Out-of-Scope Check**: [List optional/later-phase items explicitly excluded]
