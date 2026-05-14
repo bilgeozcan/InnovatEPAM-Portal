@@ -6,3 +6,11 @@ coverage/
 .nyc_output/
 runtime_logs/
 *.log
+
+node_modules/
+runtime_logs/
+.DS_Store
+target/
+build/
+.env
+*.log
